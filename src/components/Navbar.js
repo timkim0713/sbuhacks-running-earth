@@ -71,7 +71,6 @@ function Navbar(props) {
                         component="div"
                         color="primary"
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, fontSize: "16px" }}
-
                     >
                         <Link to={navItemsPath[0]} style={{ textDecoration: "none", color: "darkgreen" }}>
                             Running Earth

@@ -328,7 +328,6 @@ function Home() {
                                             icon={'./1.png'}
                                             onClick={() => setRedirect(`/events/${marker.id}`)}
                                             key={key} title={marker.name} position={marker.position} >
-
                                         </MarkerF>
                                     )}
                                 </GoogleMap>

@@ -39,7 +39,7 @@
 }
 
 .img-animation{
-  animation:imgAnimation 1s infinite;
+  animation:imgAnimation 1.25s infinite;
 }
 @keyframes imgAnimation{
   0% { -webkit-filter: blur(0px);}

@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
-import { Divider, Typography } from '@mui/material';
+import { CircularProgress, Divider, Typography } from '@mui/material';
 import EventDetail from "../components/EventDetail"
 import { useParams } from "react-router-dom"
 import EventsData from "../EventsData"
 import Heading from "../components/Heading"
+import Chip from '@mui/material/Chip';
 
 function Ticket() {
 
@@ -25,12 +26,24 @@ function Ticket() {
 
     return (
         <Box mt={20} mb={20}>
-            {/* <Heading title={"Events"} content={"Read more about the event."} /> */}
-            <Typography>hello id:{currentTicket.id}</Typography>
-            <Typography>hello id:{currentTicket.badge}</Typography>
-            <Typography>hello id:{currentTicket.description}</Typography>
-            <Typography>hello id:{currentTicket.price}</Typography>
-            <Typography>hello id:{currentTicket.date}</Typography>
+            <Box sx={{ position: "absolute", right: { xs: 80, md: 150 }, top: { xs: 240, md: 200 } }}>
+                <Chip size="small" label={currentTicket.badge} color={
+                    currentTicket.badge.toLowerCase() === "upcoming" ? 'primary' :
+                        currentTicket.badge.toLowerCase() === "ticketing" ? 'success' :
+                            currentTicket.badge.toLowerCase() === "cancelled" || currentTicket.badge.toLowerCase() === "sold out" ? 'error' :
+                                currentTicket.badge.toLowerCase() === "delayed" ? 'warning' :
+                                    "secondary"
+                } />
+            </Box>
+            <Heading title={currentTicket.name} content={currentTicket.description + ", " + currentTicket.date} />
+
+
+
+            <Box display={'flex'} justifyContent='center' pt={5} pb={20}>
+                <Typography variant='h4' color={'primary'} sx={{ mr: { xs: 0, md: 6 } }}>Ticket System Under Construction</Typography>
+                <CircularProgress></CircularProgress>
+
+            </Box>
 
         </Box>
     );

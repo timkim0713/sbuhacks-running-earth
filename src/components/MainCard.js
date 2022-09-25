@@ -30,13 +30,13 @@ function MainCard({ title, subtitle, content, credit }) {
                                 {credit}
                             </Typography>
 
-                            <a href="https://timkim0713.github.io/" style={{ color: "#96c1a1", }}>
+                            <a href="https://timkim0713.github.io/" target="_blank" rel="noopener noreferrer" style={{ color: "#96c1a1", }}>
                                 Personal Website Profile
                             </a>
-                            <a href="https://www.linkedin.com/in/timkim0713/" style={{ color: "#96c1a1", marginLeft: 15 }}>
+                            <a href="https://www.linkedin.com/in/timkim0713/" target="_blank" rel="noopener noreferrer" style={{ color: "#96c1a1", marginLeft: 15 }}>
                                 Linkedin Profile
                             </a>
-                            <a href="https://github.com/timkim0713/" style={{ color: "#96c1a1", marginLeft: 15 }}>
+                            <a href="https://github.com/timkim0713/" target="_blank" rel="noopener noreferrer" style={{ color: "#96c1a1", marginLeft: 15 }}>
                                 Github Profile
                             </a>
                         </Box>

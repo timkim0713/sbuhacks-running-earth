@@ -4,7 +4,7 @@ import MainCard from './MainCard';
 import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 import Box from "@mui/material/Box"
 
-function MainContent({ title, subtitle, content, img, isAbout, credit, link }) {
+function MainContent({ title, subtitle, content, img, isAbout, credit }) {
     return (
         <Box sx={{ width: "100%" }}>
             <Grid container
@@ -22,7 +22,7 @@ function MainContent({ title, subtitle, content, img, isAbout, credit, link }) {
                     </Card>
                 </Grid>
 
-                <MainCard title={title} content={content} subtitle={subtitle} credit={credit} link={link} />
+                <MainCard title={title} content={content} subtitle={subtitle} credit={credit} />
             </Grid>
         </Box>
     );
