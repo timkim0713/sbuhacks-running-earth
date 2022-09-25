@@ -265,7 +265,7 @@ function Home() {
 
             console.log("data updated...")
             fetchData();
-        }, 5 * 1000);
+        }, 10 * 1000);
     }, [])
 
 
@@ -303,7 +303,7 @@ function Home() {
                         onClose={handleClose}
                         aria-describedby="alert-dialog-slide-description"
                     >
-                        <DialogTitle>{"Find"}</DialogTitle>
+                        <DialogTitle>{"Global Running Events"}</DialogTitle>
                         <DialogContent>
                             <DialogContentText id="alert-dialog-slide-description">
                                 Let's find the nearest marathon event around you.

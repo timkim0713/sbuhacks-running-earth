@@ -65,14 +65,14 @@ export default function CountryChart({ data }) {
     return (
 
 
-        <div style={{ width: 370, height: 350 }}>
+        <div style={{ width: 400, height: 350 }}>
             <ResponsiveContainer>
                 <PieChart >
                     <Pie
                         activeIndex={activeIndex}
                         activeShape={renderActiveShape}
                         data={data}
-                        cx={165}
+                        cx={195}
                         cy={155}
                         innerRadius={50}
                         outerRadius={60}
