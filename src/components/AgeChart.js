@@ -65,14 +65,14 @@ export default function AgeChart({ data }) {
     return (
 
 
-        <div style={{ width: 400, height: 350 }}>
+        <div style={{ width: 415, height: 350 }}>
             <ResponsiveContainer>
                 <PieChart >
                     <Pie
                         activeIndex={activeIndex}
                         activeShape={renderActiveShape}
                         data={data}
-                        cx={195}
+                        cx={200}
                         cy={155}
                         innerRadius={50}
                         outerRadius={60}

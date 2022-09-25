@@ -7,11 +7,11 @@ import Tooltip from '@mui/material/Tooltip';
 export default function MultiCarousel({ autoPlaySpeed, rtl }) {
 
     const IMAGES = [
-        { img: "https://pics.clipartpng.com/Tree_Transparent_PNG_Clip_Art-1108.png", title: "tree1" },
-        { img: "https://purepng.com/public/uploads/large/purepng.com-tree-png-transparentnaturestylenaturalbeautifulgreen-541521125991uf5cl.png", title: "tree2" },
-        { img: "https://www.transparentpng.com/thumb/tree/tree-textures-png-15.png", title: "tree3" },
-        { img: "https://www.freepnglogos.com/uploads/tree-png/tree-photoshop-garden-pinterest-1.png", title: "tree4" },
-        { img: "https://www.freepnglogos.com/uploads/tree-png/nature-trees-transparent-15.png", title: "tree5" },
+        { img: "https://pics.clipartpng.com/Tree_Transparent_PNG_Clip_Art-1108.png", title: "Tree planted From Korea" },
+        { img: "https://purepng.com/public/uploads/large/purepng.com-tree-png-transparentnaturestylenaturalbeautifulgreen-541521125991uf5cl.png", title: "Tree planted From Korea" },
+        { img: "https://www.transparentpng.com/thumb/tree/tree-textures-png-15.png", title: "Tree planted From USA" },
+        { img: "https://www.freepnglogos.com/uploads/tree-png/tree-photoshop-garden-pinterest-1.png", title: "Tree planted From USA" },
+        { img: "https://www.freepnglogos.com/uploads/tree-png/nature-trees-transparent-15.png", title: "Tree planted From Japan" },
 
 
     ]
