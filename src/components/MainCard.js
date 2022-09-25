@@ -14,7 +14,7 @@ function MainCard({ title, subtitle, content }) {
                 <CardContent>
                     <Typography variant='h5' >{title}</Typography>
 
-                    <Typography variant='subtitle2' paddingBottom={"15px"} color={"#a1a1a1"}>{subtitle}</Typography>
+                    <Typography variant='subtitle2' paddingBottom={"15px"} color={"#blue"}>{subtitle}</Typography>
 
                     <Typography variant='body1'>
                         {content}

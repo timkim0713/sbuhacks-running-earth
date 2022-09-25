@@ -10,7 +10,7 @@ export default function MiniGallery() {
             }}>
                 <Box sx={{
                     background: "linear-gradient(to left, rgba(255,255,255,0), rgb(244, 249, 244))",
-                    height: 350,
+                    height: 500,
                     width: 100,
                     position: "absolute",
                     zIndex: 1
@@ -23,7 +23,7 @@ export default function MiniGallery() {
                 <Box>
                     <Box sx={{
                         background: "linear-gradient(to right, rgba(255,255,255,0), rgb(244, 249, 244))",
-                        height: 350,
+                        height: 500,
                         width: 100,
                         position: "absolute",
                         zIndex: 1,

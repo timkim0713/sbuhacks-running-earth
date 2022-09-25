@@ -61,7 +61,7 @@ function EventsList() {
                                                 </CardMedia>
                                                 <CardContent>
                                                     <Box display={'flex'} flexDirection={"row"} justifyContent={"space-between"}>
-                                                        <Typography gutterBottom variant="h5" component="div" color={"black"}
+                                                        <Typography gutterBottom variant="h5" component="div" color={"#555656"}
                                                             sx={{ fontWeight: 'medium' }}
                                                         >
                                                             {data.name}

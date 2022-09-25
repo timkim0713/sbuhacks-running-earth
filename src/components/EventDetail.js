@@ -30,7 +30,7 @@ export default function EventDetail({ id, index, title, date, author, content, t
             <Box>
                 <Box sx={{ textAlign: "center", m: 5 }}>
                     <img alt={"img"}
-                        style={{ objectFit: "cover", borderRadius: "10px", maxWidth: "60%" }} src={topImg} />
+                        style={{ objectFit: "cover", borderRadius: "10px", maxWidth: "80%" }} src={topImg} />
                 </Box>
                 <Typography variant="body1" color="#404040" sx={{ lineHeight: 2 }}>
                     {content}

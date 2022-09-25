@@ -23,7 +23,7 @@ function Footer() {
             backgroundColor={"primary.main"}
             sx={{ height: "40vh", paddingTop: 10 }}
         >
-            <Typography variant={"body1"} color={"secondary.main"}>2022 Running Earth©</Typography>
+            <Typography variant={"body1"} color={"secondary.main"} className="img-animation">2022 Running Earth©</Typography>
             <Grid container direction="row" justifyContent={"center"}>
 
                 {navItems.map((item, idx) => (

@@ -2,16 +2,18 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Card from '@mui/material/Card';
 import Box from "@mui/material/Box"
+import Tooltip from '@mui/material/Tooltip';
 
 export default function MultiCarousel({ autoPlaySpeed, rtl }) {
 
     const IMAGES = [
-        "https://pics.clipartpng.com/Tree_Transparent_PNG_Clip_Art-1108.png",
-        "https://purepng.com/public/uploads/large/purepng.com-tree-png-transparentnaturestylenaturalbeautifulgreen-541521125991uf5cl.png",
-        "https://www.clipartqueen.com/image-files/tree-clipart-with-fall-leaves.png",
-        "https://www.transparentpng.com/thumb/tree/tree-textures-png-15.png",
-        "https://www.freepnglogos.com/uploads/tree-png/tree-photoshop-garden-pinterest-1.png",
-        "https://www.freepnglogos.com/uploads/tree-png/nature-trees-transparent-15.png",
+        { img: "https://pics.clipartpng.com/Tree_Transparent_PNG_Clip_Art-1108.png", title: "tree1" },
+        { img: "https://purepng.com/public/uploads/large/purepng.com-tree-png-transparentnaturestylenaturalbeautifulgreen-541521125991uf5cl.png", title: "tree2" },
+        { img: "https://www.transparentpng.com/thumb/tree/tree-textures-png-15.png", title: "tree3" },
+        { img: "https://www.freepnglogos.com/uploads/tree-png/tree-photoshop-garden-pinterest-1.png", title: "tree4" },
+        { img: "https://www.freepnglogos.com/uploads/tree-png/nature-trees-transparent-15.png", title: "tree5" },
+
+
     ]
 
     const responsive = {
@@ -48,9 +50,11 @@ export default function MultiCarousel({ autoPlaySpeed, rtl }) {
                 rtl={rtl}
             >
 
-                {IMAGES.map((img, idx) => (
+                {IMAGES.map((data, idx) => (
                     // <Card sx={{ height: 75, width: 75 }}>
-                    <img src={img} alt={idx} width="75"></img>
+                    <Tooltip title={data.title}>
+                        <img className={idx % 3 === 0 ? 'img-animation' : ''} src={data.img} alt={idx} width="75" style={{ paddingTop: 5, paddingBottom: 5 }}></img>
+                    </Tooltip>
                     //  </Card>
                 ))}
 

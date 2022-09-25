@@ -38,7 +38,7 @@ function Navbar(props) {
             </Typography>
             <Divider />
             {navItems.map((item, idx) => (
-                <Link to={navItemsPath[idx]} style={{ textDecoration: 'none', }}>
+                <Link to={navItemsPath[idx]} style={{ textDecoration: 'none', color: "green" }}>
                     <ListItemButton >
                         <Typography variant="body2" color={"primary"}>
                             {item}
@@ -71,12 +71,16 @@ function Navbar(props) {
                         component="div"
                         color="primary"
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, fontSize: "16px" }}
+
                     >
-                        Running Earth
+                        <Link to={navItemsPath[0]} style={{ textDecoration: "none", color: "darkgreen" }}>
+                            Running Earth
+                        </Link>
+
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' }, transition: '2000ms' }}>
                         {navItems.map((item, idx) => (
-                            <Link to={navItemsPath[idx]} style={{ textDecoration: 'none', }}>
+                            <Link to={navItemsPath[idx]} style={{ textDecoration: 'none', color: "green" }}>
                                 <Button key={item}>
                                     <Typography color="primary">{item}</Typography>
                                 </Button>
