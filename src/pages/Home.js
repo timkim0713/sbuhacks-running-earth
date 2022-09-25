@@ -113,6 +113,23 @@ function Home() {
     }
 
 
+    function mostCountry(data) {
+        const countryData = dataCountry(data)
+
+        let max = 0
+        let maxCountry = ""
+
+        for (let i = 0; i < countryData.length; i++) {
+            if (countryData[i].count > max) {
+                max = countryData[i].count
+                maxCountry = countryData[i].country
+            }
+        }
+        return { "country": maxCountry, "count": max }
+
+
+    }
+
 
 
     function dataAge(data) {
@@ -324,21 +341,21 @@ function Home() {
                     </Dialog>
 
 
-                    <Grid container spacing={6} justifyContent={"center"} flexDirection={"row"} pb={10} mt={-10}>
+                    <Grid container spacing={6} justifyContent={"center"} flexDirection={"row"} pb={10} mt={-13}>
                         <Grid item flexDirection={'column'} >
                             <Grid item>
-                                <Typography variant="body2" sx={{ color: "darkGrey" }}>Total Supporters</Typography>
+                                <Typography variant="body2" sx={{ color: "darkGrey" }}>Supports' Trees</Typography>
                             </Grid>
                             <Grid item>
-                                <Typography variant="body1" fontWeight={'bold'}>{data.length} Supporters</Typography>
+                                <Typography variant="body1" fontWeight={'bold'}>{data.length} Trees</Typography>
                             </Grid>
                         </Grid>
                         <Grid item flexDirection={'column'}  >
                             <Grid item>
-                                <Typography variant="body2" sx={{ color: "darkGrey" }}>Miles Left</Typography>
+                                <Typography variant="body2" sx={{ color: "darkGrey" }}>Most Supporters From</Typography>
                             </Grid>
                             <Grid item>
-                                <Typography variant="body1" fontWeight={'bold'}>561 Miles</Typography>
+                                <Typography variant="body1" fontWeight={'bold'}>{mostCountry(data).country}</Typography>
                             </Grid>
                         </Grid>
                         <Grid item flexDirection={'column'}>
@@ -405,9 +422,11 @@ function Home() {
                     </Typography>
 
                     <Typography variant={"body1"} sx={{ textAlign: "center", color: "darkgreen" }}>
+                        We are  <span className='img-animation' style={{ marginLeft: 3, marginRight: 3 }}>blurry</span> of our Earth's sustainability. We need your help.
+                    </Typography>
+                    <Typography variant={"body1"} sx={{ textAlign: "center", color: "darkgreen" }}>
                         Your event funds directly support in saving our planet.
                     </Typography>
-
 
                     <Typography variant={"body1"} sx={{ textAlign: "center", color: "darkgreen" }}>
                         For every <span style={{ fontWeight: "bold", color: "green" }}>one</span> participants, we plant <span style={{ fontWeight: "bold", color: "green" }}>one</span>  tree

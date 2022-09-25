@@ -48,3 +48,15 @@
 }
 
 
+
+
+.about{
+  transition: 2000ms;
+}
+
+.about:hover{
+  background:url('/public/logo.png');
+ 
+  background-color: #8AAE92;
+  transition: 1000ms;
+}
