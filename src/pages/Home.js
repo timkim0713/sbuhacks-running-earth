@@ -15,7 +15,8 @@ function Home() {
     const [dday, setDday] = useState(DDAY_VALUE);
     const [time, setTime] = useState();
 
-
+    const [data, setData] = useState([]);
+    const [isLoading, setIsLoading] = useState(true)
     useEffect(() => {
 
         window.scroll({
@@ -54,15 +55,52 @@ function Home() {
         };
     }, []);
 
+    useEffect(() => {
+
+        setTimeout(() => {
+            setIsLoading(false)
+        }, 2000);
+
+        const fetchData = async () => {
+            const response = await fetch('https://firestore.googleapis.com/v1/projects/running-earth/databases/(default)/documents/users?key=AIzaSyA4g6qjIOMjhAfbeLdr4YZ4rZnyN7etnas');
+            const parsed = await response.json();
+            const data = parsed.documents;
+            console.log(data[0].fields)
+            const alldata = []
+            for (let i = 0; i < data.length; i++) {
+                let parsedData = {}
+                parsedData['age'] = (data[i].fields.age.stringValue)
+                parsedData['country'] = (data[i].fields.country.stringValue)
+
+                alldata.push(parsedData)
+                // console.log("@", alldata)
+            }
+
+            setData(alldata)
+        }
+        fetchData();
+
+
+        setInterval(function () {
+            // your code goes here...
+
+            console.log("data updated...")
+            fetchData();
+        }, 60 * 1000);
+    }, [])
+
 
     return (
-        <Box mt={-2}>
-            <Box pb={5}>
+        <Box mt={-5}>
+            <Box pb={5} pt={2}>
                 {/* <MainCarousel /> */}
 
                 <Grid container flexDirection={'column'} justifyContent={"center"} alignItems={"center"} rowGap={4} sx={{
                     backgroundColor: "white", color: '#616161', width: '100%', borderRadius: 3, borderTopLeftRadius: 1, borderTopRightRadius: 1,
-                    boxShadow: "#F6f7f6 10px 10px 10px 10px"
+                    boxShadow: "#F6f7f6 5px 10px 10px 10px",
+
+
+
                 }}>
 
                     <Grid item p={6} pt={8}>
@@ -78,10 +116,10 @@ function Home() {
                     <Grid container spacing={6} justifyContent={"center"} flexDirection={"row"} pb={10}>
                         <Grid item flexDirection={'column'} >
                             <Grid item>
-                                <Typography variant="body2" sx={{ color: "darkGrey" }}>Average Runs</Typography>
+                                <Typography variant="body2" sx={{ color: "darkGrey" }}>Total Participants</Typography>
                             </Grid>
                             <Grid item>
-                                <Typography variant="body1" fontWeight={'bold'}>0.01ETH</Typography>
+                                <Typography variant="body1" fontWeight={'bold'}>800 Runners</Typography>
                             </Grid>
                         </Grid>
                         <Grid item flexDirection={'column'}  >
@@ -89,7 +127,7 @@ function Home() {
                                 <Typography variant="body2" sx={{ color: "darkGrey" }}>Miles Left</Typography>
                             </Grid>
                             <Grid item>
-                                <Typography variant="body1" fontWeight={'bold'}>4000NFTs</Typography>
+                                <Typography variant="body1" fontWeight={'bold'}>561 Miles</Typography>
                             </Grid>
                         </Grid>
                         <Grid item flexDirection={'column'}>
@@ -108,10 +146,10 @@ function Home() {
                             sx={{ backgroundColor: "#eeeeee", borderRadius: 2, p: 1.5 }}
                         >
                             <Grid item>
-                                <TextField size='small' sx={{ backgroundColor: "white", input: { color: "#4e6b55", fontWeight: "bold" } }}></TextField>
+                                <TextField placeholder='ZIP Code' size='small' sx={{ backgroundColor: "white", input: { color: "#4e6b55", fontWeight: "bold" } }}></TextField>
                             </Grid>
                             <Grid item>
-                                <Button variant='contained' sx={{ height: "40px" }} className={"blinking"}>Miny My NFT</Button>
+                                <Button variant='contained' sx={{ height: "40px" }} className={"blinking"}>Find Nearest Marathon</Button>
                             </Grid>
                         </Grid>
                     </Grid>
@@ -152,13 +190,22 @@ function Home() {
 
                 <Box display={"flex"} justifyContent={"center"} flexDirection={"column"} mt={6}>
                     <Typography variant={"body2"} sx={{ textAlign: "center" }}>
-                        RUN NOW    RUN NOW  RUN NOW RUN NOW
+                        Running Earth &copy; is a nonprofit organization.
+                    </Typography>
+
+                    <Typography variant={"body1"} sx={{ textAlign: "center", color: "darkgreen" }}>
+                        Your event funds directly support in saving our planet.
+                    </Typography>
+
+
+                    <Typography variant={"body1"} sx={{ textAlign: "center", color: "darkgreen" }}>
+                        For every one participants, we plant one tree
                     </Typography>
                     <Box display={"flex"} justifyContent={"center"} width={"100%"} mt={3}>
 
 
                         <Link to={"/events"} style={{ textDecoration: 'none' }}>
-                            <Button variant={"outlined"} >
+                            <Button variant={"outlined"} size={'large'} >
                                 <Typography variant={"h6"}>
                                     RUN EARTH NOW
                                 </Typography>

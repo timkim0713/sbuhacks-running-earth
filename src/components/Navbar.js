@@ -55,7 +55,7 @@ function Navbar(props) {
 
     return (
         <>
-            <AppBar component="nav" style={{ zIndex: 99999 }} sx={{ bgcolor: "white", background: "transparent", backdropFilter: "blur(6px)", boxShadow: "rgba(246,247,246,.1) 1px 1px 1px 1px", transition: "1000ms" }} >
+            <AppBar component="nav" sx={{ bgcolor: "white", background: "transparent", zIndex: { xs: "-1", md: "999" }, backdropFilter: { xs: "blur(0px)", md: "blur(4px)", }, boxShadow: "rgba(246,247,246,.1) 1px 1px 1px 1px", transition: "1000ms" }} >
                 <Toolbar>
                     <IconButton
                         color="inherit"

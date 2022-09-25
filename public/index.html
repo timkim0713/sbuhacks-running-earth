@@ -25,6 +25,29 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Running Earth</title>
+  
+
+<style>
+  df-messenger {
+   --df-messenger-bot-message: #8AAE92;
+   --df-messenger-button-titlebar-color: #8AAE92;
+   --df-messenger-chat-background-color: #fafafa;
+   --df-messenger-font-color: white;
+   --df-messenger-send-icon: #878fac;
+   --df-messenger-user-message: #072704;
+  }
+</style>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  
+  
+  <df-messenger
+    intent="user-followup"
+    chat-title="RUNNING EARTH"
+    agent-id="9560b58d-dc0c-485a-a5b4-632bc238d765"
+    language-code="en"
+    chat-icon="./logo2.png"
+  ></df-messenger>
+
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

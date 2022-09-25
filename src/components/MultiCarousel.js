@@ -6,12 +6,12 @@ import Box from "@mui/material/Box"
 export default function MultiCarousel({ autoPlaySpeed, rtl }) {
 
     const IMAGES = [
-        "https://i.pinimg.com/originals/7f/c7/17/7fc717724414a8f51fbb592c1a36b33d.png",
-        "https://i.pinimg.com/originals/4b/6f/0f/4b6f0f786d32460c3eb9b9f1c68dcf69.png",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCAcf1R1YoyiNeLoXcWAgejQNwLfzXySf-vA&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXExn76EXhcWk_TfeKVnIUdJQxHEVuairF_Q&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWVEdOmLEVMLSNRg1-lendVl_IxNDb4PDvLA&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxh2ciyaHCTQDas_FeGoCdDENFvhkyco7-iA&usqp=CAU",
+        "https://pics.clipartpng.com/Tree_Transparent_PNG_Clip_Art-1108.png",
+        "https://purepng.com/public/uploads/large/purepng.com-tree-png-transparentnaturestylenaturalbeautifulgreen-541521125991uf5cl.png",
+        "https://www.clipartqueen.com/image-files/tree-clipart-with-fall-leaves.png",
+        "https://www.transparentpng.com/thumb/tree/tree-textures-png-15.png",
+        "https://www.freepnglogos.com/uploads/tree-png/tree-photoshop-garden-pinterest-1.png",
+        "https://www.freepnglogos.com/uploads/tree-png/nature-trees-transparent-15.png",
     ]
 
     const responsive = {

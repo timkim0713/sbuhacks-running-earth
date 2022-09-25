@@ -9,11 +9,11 @@ export default function MiniGallery() {
                 display: "flex", flexDirection: "row"
             }}>
                 <Box sx={{
-                    background: "linear-gradient(to left, rgba(255,255,255,0), #fff)",
+                    background: "linear-gradient(to left, rgba(255,255,255,0), rgb(244, 249, 244))",
                     height: 350,
                     width: 100,
                     position: "absolute",
-                    zIndex: 9999
+                    zIndex: 1
 
                 }} />
                 <Box width={"100%"}>
@@ -22,11 +22,11 @@ export default function MiniGallery() {
 
                 <Box>
                     <Box sx={{
-                        background: "linear-gradient(to right, rgba(255,255,255,0), #fff)",
+                        background: "linear-gradient(to right, rgba(255,255,255,0), rgb(244, 249, 244))",
                         height: 350,
                         width: 100,
                         position: "absolute",
-                        zIndex: 9999,
+                        zIndex: 1,
                         marginLeft: -12
 
                     }} />

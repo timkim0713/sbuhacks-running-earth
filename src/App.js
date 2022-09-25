@@ -33,7 +33,7 @@ function App() {
 
       setIsLoading(false)
 
-    }, 3000);
+    }, 2000);
 
 
   }, [])
