@@ -17,6 +17,7 @@ function MainCard({ title, subtitle, content, credit }) {
                     <Box display={'flex'} justifyContent="space-between" flexDirection={"column"}>
                         <Box>
                             <Typography variant='h5' color={"#444"}>{title}</Typography>
+                            <Box sx={{ height: 10, width: "300px", mt: -2 }} backgroundColor="#E4eee4" />
 
                             <Typography variant='subtitle2' paddingBottom={"15px"} color={"#8AAE92"}>{subtitle}</Typography>
 

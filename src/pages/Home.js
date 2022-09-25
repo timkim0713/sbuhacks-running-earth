@@ -265,7 +265,7 @@ function Home() {
 
             console.log("data updated...")
             fetchData();
-        }, 30 * 1000);
+        }, 5 * 1000);
     }, [])
 
 
@@ -421,7 +421,7 @@ function Home() {
                     </Typography>
 
                     <Typography variant={"body1"} sx={{ textAlign: "center", color: "darkgreen" }}>
-                        We are  <span className='img-animation' style={{ marginLeft: 3, marginRight: 3 }}>blurry</span> of our Earth's sustainability. We need your help.
+                        We are  <span className='img-animation' style={{ marginLeft: 3, marginRight: 3 }}>blurry</span> about our Earth's sustainability. We need your help.
                     </Typography>
                     <Typography variant={"body1"} sx={{ textAlign: "center", color: "darkgreen" }}>
                         Your event funds directly support in saving our planet.
